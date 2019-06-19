@@ -1,0 +1,145 @@
+1 .let & const.
+
+let is a keyword which is used to create varibales.
+const is a keyword is used to create constant variables.
+
+let name = 'Raja';
+const PI = 3.14;
+
+
+2 .arrow function : Iy has a different syntax to create a function.
+
+syntax : 
+
+const myFunc = () => {
+   //function body
+   // no more issues with 'this' keyword.
+}
+
+//arrow function
+const printName = (name) => {
+    console.log(name);
+}
+//calling printName
+printName('Raja');
+
+3. import and export
+
+Inorder to write modular code, we use import and export.
+
+person.js
+----------
+
+const person = {
+    name: 'Raja';
+}
+// default exports.
+export default person
+
+utility.js
+----------
+//named exports.
+export const baseData = 10;
+export const clean = () => {
+
+}
+
+app.js
+-------
+import prs from './person'
+import { baseData } from './utility'
+import { clean as myClean } from './utility'
+
+
+4. Classes
+
+classes are blue print for javascript object.
+
+class Person {
+    constructor () {
+        this.name = 'Raja';
+    }
+    printMyName () {
+        console.log(this.name);
+    }
+}
+
+class Dog extends Person{
+    constructor () {
+        super()
+        this.dog = 'Max'
+    }
+    running () {
+       console.log('I need to run with my buddy');
+    }
+}
+
+// instantiate Person class
+const dog = new Dog();
+dog.running();
+dog.printMyName();
+
+classes properties and methods
+
+properties are variables attached to classes/objects.
+methods are funtions attached to classes/objects.
+
+properties & methods declaration
+
+ES6                                             
+-------------
+class Person {                                                                          
+  constructor () {                                    
+    this.name = 'Raja';
+   }
+   myName () {
+       console.log(this.name);
+   }
+}
+
+ES7
+----------
+class Person {
+    name = 'Raja';
+    myName = () => {
+        console.log(this.name);
+    }
+}
+
+
+5. The Spread & Rest operator (...)
+Spread operator(...) : split array elements or object properties.
+
+const newArray = [...oldArray, 1, 2] // adding 1 &2 to oldArray
+const newObject=  {...oldObject, newKey: 'newValue'} 
+
+Rest Operator (...) : merge list of funtion arguments into array.
+
+function mySort(...args){
+    return args.sort();
+}
+mySort(4,3,5,1,2);
+
+
+6. Destructring
+
+extracting elements from an array and object properties and store them in variables.
+
+Array Destructring 
+[a,b] = [1,2]
+console.log(a);
+console.log(b);
+
+Object Destructring
+{name} = {name:'Raja', age:28}
+console.log(name); //Raja
+console.log(age); //undefined
+
+Reference & Primitive Type
+
+Objects and arrays are Reference type.
+
+// go throgh array funtions map,filter,reduce etc
+
+
+

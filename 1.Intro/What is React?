@@ -1,0 +1,28 @@
+ReactJS is a java script library for building User Interfaces.
+ReactJS is all about creating components.
+component is a custom html element.
+component is a reusable code.
+
+React uses two libraries
+
+1. React : for developing react component.
+2. ReactDOM : for rendering react component on browser.
+
+
+Q) How to create a component ?
+
+  By extending Component class of React library.
+  extending class should have render() method which returns JSX code.
+
+  class MyComponent extends Component {
+      render () {
+          return (
+              //JSX CODE
+              <div>
+                <h1>Hello React!</h1>
+              </div>
+          );
+      }
+  }
+
+

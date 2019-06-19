@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React App</title>
+    <!-- The core React library -->
+    <script src="https://fb.me/react-0.14.1.js"></script>
+    <!-- The ReactDOM Library -->
+    <script src="https://fb.me/react-dom-0.14.1.js"></script>
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<style>
+    .person {
+        margin: 10px;
+        width: 200px;
+        display: inline-block;
+        box-shadow: 0 2px 2px #ccc;
+        padding: 20px;
+        border: 1px solid #eee;
+    }
+</style>
+
+<body>
+    <div id="app"></div>
+
+</body>
+<script type="text/babel">
+    // React component
+  function Person(props) {
+  return (
+    <div className="person">
+      <h1>{props.name}</h1>
+      <p>{props.age}</p>
+     </div>
+  );
+}
+
+var app = (
+  <div>
+     <Person name="React" age="0"/>
+     <Person  name="Scala" age="0"/>
+   </div>
+);
+
+ReactDOM.render(app,
+                document.querySelector('#app'));
+
+  </script>
+
+</html>
